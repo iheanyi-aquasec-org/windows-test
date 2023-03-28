@@ -17,14 +17,14 @@ steps:
   inputs:
     image: 'windowsimg/apache24:latest'
     scanType: 'hosted'
-    register: true
+    register: false
     hideBase: false
-    showNegligible: false
+    showNegligible: true
     windowsScannerVersion: '6.5.0'
-    registry: 'https://hub.docker.com/'
+    registry: 'https://hub.docker.com'
     connection: 'ihwinddowsado'
+    scanMalware: true
     showWillNotFix: true
-  displayName: 'Pull and Scan'
 
 - script: |
     echo SCAN DONE..
