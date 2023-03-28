@@ -29,5 +29,3 @@ steps:
 - script: |
     echo SCAN DONE..
   displayName: 'CLOSING'
-
-appendCommitMessageToRunName:
