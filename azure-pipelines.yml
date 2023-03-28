@@ -12,7 +12,18 @@ pool:
 steps:
 - script: |
     echo Hello, windows!
-    docker pull windowsimg/apache24:latest
+    docker pull windowsimg/apache24
+- task: aquasecScanner@4
+  inputs:
+    image: 'windowsimg/apache24:latest'
+    scanType: 'local'
+    register: true
+    hideBase: false
+    showNegligible: false
+    windowsScannerVersion: '6.5.0'
+    registry: 'https://hub.docker.com/'
+    connection: 'ihwinddowsado'
+    showWillNotFix: true
   displayName: 'Pull and Scan'
 
 - script: |
