@@ -13,7 +13,7 @@ steps:
 - script: |
     echo Hello, windows!
     docker pull windowsimg/apache24:latest
-    docker run -e BUILD_JOB_NAME=Apache_Windows --rm -v /var/run/docker.sock:/var/run/docker.sock registry.aquasec.com/scanner:2022.4 scan --host https://225fccbcb7.cloud.aquasec.com/ --local test:v1 --token ${{ secrets.TOKEN }} --layer-vulnerabilities --no-verify
+    docker run -e BUILD_JOB_NAME=Apache_Windows --rm -v /var/run/docker.sock:/var/run/docker.sock registry.aquasec.com/scanner:2022.4 scan --host https://225fccbcb7.cloud.aquasec.com/ --local test:v1 --token e0941430f3fc497835fe0ab5c49fc079b34540da --layer-vulnerabilities --no-verify
   displayName: 'Pull and Scan'
 
 - script: |
