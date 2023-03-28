@@ -16,7 +16,7 @@ steps:
 - task: aquasecScanner@4
   inputs:
     image: 'windowsimg/apache24:latest'
-    scanType: 'local'
+    scanType: 'hosted'
     register: true
     hideBase: false
     showNegligible: false
@@ -29,3 +29,5 @@ steps:
 - script: |
     echo SCAN DONE..
   displayName: 'CLOSING'
+
+appendCommitMessageToRunName:
